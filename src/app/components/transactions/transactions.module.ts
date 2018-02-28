@@ -5,14 +5,10 @@ import { RouterModule } from "@angular/router";
 import { transactionsComponents } from './index';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewOneTransactionComponent } from './view-one-transaction/view-one-transaction.component';
-import { ViewAllTransactionsComponent } from './view-all-transactions/view-all-transactions.component';
 
 @NgModule({
   declarations: [
-    ...transactionsComponents,
-    ViewOneTransactionComponent,
-    ViewAllTransactionsComponent
+    ...transactionsComponents
   ],
   imports: [
     CommonModule,
