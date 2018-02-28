@@ -1,0 +1,27 @@
+section {
+    text-align: center;
+}
+
+article {
+    width: 80%;
+    background: rgb(212, 207, 207);
+    margin: 10px;
+    text-align: left;
+}
+
+div {
+    display: inline-block;
+}
+
+.block-num {
+    background: gray;
+    width: 20%;
+    margin: 20px;
+    vertical-align: top;
+    height: 80px;
+}
+
+.block-num p {
+    text-align: center;
+    padding-top: 13px;  
+}
