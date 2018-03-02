@@ -5,20 +5,21 @@ import { RouterModule } from "@angular/router";
 import { blocksComponents } from "./index";
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewOneBlockComponent } from './view-one-block/view-one-block.component';
-import { ViewAllBlocksComponent } from './view-all-blocks/view-all-blocks.component';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+
+import { BlockService } from "../../core/services/block/block.service";
 
 @NgModule({
     declarations: [
       ...blocksComponents,
-      ViewOneBlockComponent,
-      ViewAllBlocksComponent
     ],
     imports: [
       CommonModule, 
       RouterModule,
       HttpClientModule,
-      BrowserAnimationsModule
-    ]
+      BrowserAnimationsModule,
+      ToastModule.forRoot()
+    ],
+    providers: [BlockService]
   })
   export class BlocksModule {  }

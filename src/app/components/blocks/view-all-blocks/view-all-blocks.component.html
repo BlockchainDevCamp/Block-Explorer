@@ -1,34 +1,10 @@
 <h1>Block</h1>
 <section>
-  <article>
-    <div class="block-num"><p>Block 51</p></div>
+  <article *ngFor="let block of blocks">
+    <div class="block-num" (click)="viewBlock(block.index)"><p>Block {{block.index}}</p></div>
     <div class="block-info">
-      <p>total transaction 5</p>
-      <p>mined by 0x432432dfgdg43e54</p>
-      <p>block reward 3</p>
-    </div>
-  </article>
-  <article>
-    <div class="block-num"><p>Block 50</p></div>
-    <div class="block-info">
-      <p>total transaction 5</p>
-      <p>mined by 0x432432dfgdg43e54</p>
-      <p>block reward 3</p>
-    </div>
-  </article>
-  <article>
-    <div class="block-num"><p>Block 49</p></div>
-    <div class="block-info">
-      <p>total transaction 5</p>
-      <p>mined by 0x432432dfgdg43e54</p>
-      <p>block reward 3</p>
-    </div>
-  </article>
-  <article>
-    <div class="block-num"><p>Block 48</p></div>
-    <div class="block-info">
-      <p>total transaction 5</p>
-      <p>mined by 0x432432dfgdg43e54</p>
+      <p>total transaction {{block.transactions.length}}</p>
+      <p>mined by {{block.minedBy}}</p>
       <p>block reward 3</p>
     </div>
   </article>

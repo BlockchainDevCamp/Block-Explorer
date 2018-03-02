@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlocksModule } from "./components/blocks/blocks.module";
 import { SharedModule } from "./components/shared/shared.module";
 import { TransactionsModule } from "./components/transactions/transactions.module";
+import { ServiceModule } from './core/services/service.module';
+import { ToastModule } from 'ng2-toastr/ng2-toastr'
 
 import { routes } from "./app.routing";
 import { AppComponent } from './app.component';
@@ -22,12 +24,15 @@ import { ViewAcountComponent } from './components/view-acount/view-acount.compon
     BrowserModule,
     CommonModule,
     HttpClientModule,
+    ServiceModule,
     BlocksModule,
     SharedModule,
     TransactionsModule,
     RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    ToastModule.forRoot()
   ],
-  providers: [],
+  providers: [ServiceModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

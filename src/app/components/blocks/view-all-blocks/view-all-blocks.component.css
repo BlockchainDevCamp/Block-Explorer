@@ -19,6 +19,15 @@ div {
     margin: 20px;
     vertical-align: top;
     height: 80px;
+    padding: 2px;
+}
+
+.block-num:hover {
+    color: white;
+    background: black;
+    border: 2px solid yellow;
+    cursor: pointer;
+    padding: 0;
 }
 
 .block-num p {

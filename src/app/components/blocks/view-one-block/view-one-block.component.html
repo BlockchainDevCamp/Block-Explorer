@@ -1,7 +1,6 @@
-<h1>Block 51 Info</h1>
+<h1>Block {{blockIndex}} Info</h1>
 <section>
   <ul>
-    <li>Index:</li>
     <li>TimeStamp:</li>
     <li>Transactions:</li>
     <li>Hash:</li>
@@ -10,12 +9,11 @@
     <li>Nonce:</li>
   </ul>
   <ul>
-    <li>51</li>
-    <li>28/02/2018</li>
-    <li>6</li>
-    <li>0x1e6cc5ccbbdcdb8b9dd1afab1b8f9275ffde62e8b8a72750583774b28a285217 </li>
-    <li>0x5ca6475162e632579d9e5c7d3d7254c3818a01912e3a9bc67eb5485b7ed12c46</li>
-    <li>0x52bc44d5378309ee2abf1539bf71de1b7d7be3b5</li>
-    <li>55325345</li>
+    <li>{{blockData?.dateCreated}}</li>
+    <li>{{blockData?.transactions.length}}</li>
+    <li>{{blockData?.blockHash}} </li>
+    <li>{{blockData?.prevBlockHash}}</li>
+    <li>{{blockData?.minedBy}}</li>
+    <li>{{blockData?.nonce}}</li>
   </ul>
 </section>
