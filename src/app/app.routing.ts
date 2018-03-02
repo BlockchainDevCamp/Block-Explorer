@@ -13,7 +13,7 @@ export const routes: Routes = [
     { path: '', component: ViewAllBlocksComponent, pathMatch: 'full' },
     { path: 'block/:index', component: ViewOneBlockComponent },
     { path: 'transactions', component: ViewAllTransactionsComponent },
-    { path: 'transaction/:index', component: ViewOneTransactionComponent },
+    { path: 'transaction/:txHash', component: ViewOneTransactionComponent },
     { path: 'address/:address', component: ViewAcountComponent },
     { path: 'transactions/pending', component: PendingTransactionsComponent },
     { path: 'block/:index/transactions', component: BlockTransactionsComponent },

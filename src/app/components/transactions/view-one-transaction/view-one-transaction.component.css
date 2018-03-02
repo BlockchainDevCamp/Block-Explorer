@@ -2,3 +2,12 @@ ul {
     display: inline-block;
     list-style: none;
 }
+
+.link {
+    color: blue;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

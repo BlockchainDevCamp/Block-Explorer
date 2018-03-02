@@ -27,4 +27,8 @@ export class ViewAllBlocksComponent implements OnInit {
     this.router.navigate(['/block/' + index])
   }
 
+  viewBlockTransactions(index) {
+    this.router.navigate([`/block/${index}/transactions`]);
+  }
+
 }

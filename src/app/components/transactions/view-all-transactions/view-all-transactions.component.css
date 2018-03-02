@@ -6,3 +6,8 @@ ul {
 article {
     border-bottom: 3px solid gray;
 }
+
+article:hover {
+    border-color: rgb(212, 212, 28);
+    cursor: pointer;
+}

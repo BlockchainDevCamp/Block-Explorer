@@ -34,3 +34,12 @@ div {
     text-align: center;
     padding-top: 13px;  
 }
+
+.transactions {
+    color: blue;
+}
+
+.transactions:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

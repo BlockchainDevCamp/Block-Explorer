@@ -10,7 +10,7 @@
   </ul>
   <ul>
     <li>{{blockData?.dateCreated}}</li>
-    <li>{{blockData?.transactions.length}}</li>
+    <li class="transactions" (click)="viewBlockTransactions()">{{blockData?.transactions.length}}</li>
     <li>{{blockData?.blockHash}} </li>
     <li>{{blockData?.prevBlockHash}}</li>
     <li>{{blockData?.minedBy}}</li>

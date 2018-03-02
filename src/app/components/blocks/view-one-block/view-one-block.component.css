@@ -2,3 +2,12 @@ ul {
     display: inline-block;
     list-style: none;
 }
+
+.transactions {
+    color: blue;
+}
+
+.transactions:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

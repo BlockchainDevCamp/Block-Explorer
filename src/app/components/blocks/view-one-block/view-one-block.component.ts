@@ -12,7 +12,7 @@ export class ViewOneBlockComponent implements OnInit {
   public blockIndex: String;
   public blockData: any;
 
-  constructor(private route: ActivatedRoute, private blockService: BlockService) { 
+  constructor(private route: ActivatedRoute, private blockService: BlockService,private router: Router) { 
     this.blockIndex = this.route.snapshot.params['index'];
     console.log(this.blockIndex)
   }
@@ -29,6 +29,10 @@ export class ViewOneBlockComponent implements OnInit {
     err => {
       console.log(err);
     });
+  }
+
+  viewBlockTransactions() {
+    this.router.navigate([`/block/${this.blockIndex}/transactions`]);
   }
 
 }

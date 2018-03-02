@@ -1,6 +1,6 @@
 <h1>Confirmed transaction</h1>
 <section>
-  <article *ngFor="let transaction of transactions">
+  <article *ngFor="let transaction of transactions"  (click)="viewTransaction(transaction.transactionHash)">
     <ul>
       <li>Tx:</li>
       <li>From:</li>

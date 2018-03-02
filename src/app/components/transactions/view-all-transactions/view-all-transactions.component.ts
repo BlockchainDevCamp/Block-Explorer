@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlockService } from "../../../core/services/block/block.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-transactions',
@@ -10,7 +11,7 @@ export class ViewAllTransactionsComponent implements OnInit {
   public transactions: any = [];
   public blocks: any = [];
 
-  constructor(private blockService: BlockService) { }
+  constructor(private blockService: BlockService,private router: Router) { }
 
   ngOnInit() {
     this.blockService.getAllBlocks().subscribe(data => {
@@ -30,6 +31,10 @@ export class ViewAllTransactionsComponent implements OnInit {
         }
       }
     }
+  }
+
+  viewTransaction(txHash) {
+    this.router.navigate([`/transaction/${txHash}`]);
   }
 
 }

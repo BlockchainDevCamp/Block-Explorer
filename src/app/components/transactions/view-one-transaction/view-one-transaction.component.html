@@ -6,20 +6,18 @@
     <li>Value:</li>
     <li>Tx hash:</li>
     <li>Date:</li>
-    <li>Mined by:</li>
     <li>Mined in Block:</li>
     <li>Paid:</li>
     <li>Fee:</li>
   </ul>
   <ul>
-    <li>0x0681d8db095565fe8a346fa0277bffde9c0edbbf</li>
-    <li>0x957d712c0eab053afae0e0ab7f9999155c178bd3</li>
-    <li>5</li>
-    <li>0x78d9f2eb2c8ebcd48ce08963fa9fc99af3f2f3f79b41c07fd75bfe37110f868c </li>
-    <li>28/02/2018</li>
-    <li>0x0681d8db095565fe8a346fa0277bffde9c0edbbf</li>
-    <li>51</li>
-    <li>Yes</li>
-    <li>0.005</li>
+    <li class="link" (click)="viewAddress(txData?.from)">{{txData?.from}}</li>
+    <li class="link" (click)="viewAddress(txData?.to)">{{txData?.to}}</li>
+    <li>{{txData?.value}}</li>
+    <li>{{txData?.transactionHash}} </li>
+    <li>{{txData?.dateReceived}}</li>
+    <li class="link" (click)="viewBlock(txData?.minedInBlockIndex)">{{txData?.minedInBlockIndex}}</li>
+    <li>{{txData?.paid}}</li>
+    <li>{{txData?.fee}}</li>
   </ul>
 </section>
