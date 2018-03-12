@@ -4,9 +4,9 @@ The `Block Exprorer` is an application which:
 * [Explorer blockchan](#blockchain)
 * [Explorer block](#block)
 * [Eplorer block transactions](#block-transactions)
-* [Eplorer all transactions](#all-transaction)
+* [Eplorer all transactions](#all-transactions)
 * [Explorer transaction](#transaction)
-* [Explorer adrress balance]#(address-balance)
+* [Explorer adrress balance](#address-balance)
 
 ## How to start
 
