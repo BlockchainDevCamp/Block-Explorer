@@ -10,6 +10,10 @@ export class GetBalanceService {
   constructor(private http: HttpClient) { }
 
   getBalance(address): Observable<Object> {
-    return this.http.get(`${baseUrl}balance/${address}/confirmations/6`)
+    return this.http.get(`${baseUrl}/addresses/${address}/balance`)
+  }
+
+  getTransactionFromAddress(address): Observable<Object> {
+    return this.http.get(`${baseUrl}/addresses/${address}/transactions`)
   }
 }

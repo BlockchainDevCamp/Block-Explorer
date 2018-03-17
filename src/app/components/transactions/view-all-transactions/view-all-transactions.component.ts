@@ -17,8 +17,6 @@ export class ViewAllTransactionsComponent implements OnInit {
     this.blockService.getAllBlocks().subscribe(data => {
       this.blocks = data;
       this.getTransactions();
-
-      console.log(this.transactions)
     })
   }
 

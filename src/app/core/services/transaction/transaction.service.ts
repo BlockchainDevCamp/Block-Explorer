@@ -12,4 +12,12 @@ export class TrasactionService {
   getTransaction(txHash): Observable<Object> {
     return this.http.get(`${baseUrl}transactions/${txHash}`)
   }
+
+  getAllConfirmTransactions(): Observable<Object>{
+    return this.http.get(`${baseUrl}transactions/confirmed`)
+  }
+
+  getAllPendingTransactions(): Observable<Object>{
+    return this.http.get(`${baseUrl}transactions/pending`)
+  }
 }
