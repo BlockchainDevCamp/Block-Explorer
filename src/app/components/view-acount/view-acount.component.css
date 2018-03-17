@@ -6,3 +6,17 @@ ul {
 article {
     border-bottom: 3px solid gray;
 }
+
+.transactions ul {
+    display: inline-block;
+    list-style: none;
+}
+
+.transactions article {
+    border-bottom: 3px solid gray;
+}
+
+.transactions article:hover {
+    border-color: rgb(212, 212, 28);
+    cursor: pointer;
+}

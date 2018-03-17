@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlockService } from "../../../core/services/block/block.service";
+import { TrasactionService } from "../../../core/services/transaction/transaction.service";
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,26 +9,14 @@ import { Router } from '@angular/router';
 })
 export class ViewAllTransactionsComponent implements OnInit {
   public transactions: any = [];
-  public blocks: any = [];
 
-  constructor(private blockService: BlockService,private router: Router) { }
+  constructor(private trasactionService: TrasactionService,private router: Router) { }
 
   ngOnInit() {
-    this.blockService.getAllBlocks().subscribe(data => {
-      this.blocks = data;
-      this.getTransactions();
+    this.trasactionService.getAllConfirmTransactions().subscribe(data => {
+      console.log(data);
+      this.transactions = data;
     })
-  }
-
-  getTransactions() {
-    for (const block of this.blocks) {
-      let transactions = block.transactions;
-      if (transactions.length !== 0) {
-        for (const transaction of transactions) {
-          this.transactions.push(transaction)
-        }
-      }
-    }
   }
 
   viewTransaction(txHash) {

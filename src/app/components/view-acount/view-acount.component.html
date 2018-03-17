@@ -1,9 +1,34 @@
 <h1>Address {{addressData?.address}}</h1>
 <section>
   <ul>
-    <li>Balance</li>
+    <li>Confirmed Balance</li>
+    <li>Last Mined Balance</li>
+    <li>Pending Balance</li>
   </ul>
   <ul>
-    <li>{{addressData?.confirmedBalance}}</li>
+    <li>{{addressData?.confirmedBalance?.balance}} coins</li>
+    <li>{{addressData?.lastMinedBalance?.balance}} coins</li>
+    <li>{{addressData?.pendingBalance?.balance}} coins</li>
   </ul>
+
+  <section class="transactions">
+    <article *ngFor="let transaction of transactions.transactions"  (click)="viewTransaction(transaction.transactionHash)">
+      <ul>
+        <li>Tx:</li>
+        <li>From:</li>
+        <li>To:</li>
+        <li>Amount:</li>
+        <li>Paid:</li>
+        <li>Date:</li>
+      </ul>
+      <ul>
+        <li>{{transaction.transactionHash}}</li>
+        <li>{{transaction.from}}</li>
+        <li>{{transaction.to}}</li>
+        <li>{{transaction.value}}</li>
+        <li>{{transaction.paid}}</li>
+        <li>{{transaction.dateReceived}}</li>
+      </ul>
+    </article>
+  </section>
 </section>

@@ -10,10 +10,10 @@ import { GetBalanceService } from "../../core/services/get-balance/get-balance.s
 export class ViewAcountComponent implements OnInit {
   public address: String;
   public addressData: any;
+  public transactions: any = [];
 
   constructor(private route: ActivatedRoute, private getBalanceService: GetBalanceService,private router: Router) { 
     this.address = this.route.snapshot.params['address'];
-    console.log(this.address)
   }
 
   ngOnInit() {
@@ -23,8 +23,15 @@ export class ViewAcountComponent implements OnInit {
   loadData() {
     this.getBalanceService.getBalance(this.address).subscribe(data => {
       this.addressData = data;
-      console.log(data)
+    });
+
+    this.getBalanceService.getTransactionFromAddress(this.address).subscribe(data => {
+      this.transactions = data;
     })
+  }
+
+  viewTransaction(txHash) {
+    this.router.navigate([`/transaction/${txHash}`]);
   }
 
 }

@@ -13,7 +13,6 @@ export class ViewOneTransactionComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private trasactionService: TrasactionService,private router: Router) { 
     this.txHash = this.route.snapshot.params['txHash'];
-    console.log(this.txHash)
   }
 
   ngOnInit() { 
@@ -23,7 +22,6 @@ export class ViewOneTransactionComponent implements OnInit {
   loadData() {
     this.trasactionService.getTransaction(this.txHash).subscribe(data => {
       this.txData = data;
-      console.log(data);
     })
   }
 
