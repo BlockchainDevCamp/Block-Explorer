@@ -1,11 +1,25 @@
-ul li {
-    display: inline-block;
+header {
+    background: #D9BA5F;
     padding: 20px;
-    background-color: aquamarine;
+    padding-left: 155px;
 }
 
 a {
     text-decoration: none;
+    color: #A64C38;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F2A35E;
+    border: 2px solid #A64C38;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+a:hover {
+    color: #D9BA5F;
+    background: #A64C38;
+    border-color: #A64C38;
+    cursor: pointer; 
 }
 
 input {

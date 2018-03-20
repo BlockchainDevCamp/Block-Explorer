@@ -1,4 +1,7 @@
 footer {
-    background: wheat;
+    background: #D9BA5F;
     padding: 20px;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 155px;
 }

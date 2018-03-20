@@ -4,10 +4,11 @@ ul {
 }
 
 article {
-    border-bottom: 3px solid gray;
+    border-bottom: 3px solid #D9BA5F
 }
 
 article:hover {
-    border-color: rgb(212, 212, 28);
+    border-color: #115D8C;
+    background: #C7D9D9;
     cursor: pointer;
 }

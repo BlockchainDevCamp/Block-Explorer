@@ -3,10 +3,10 @@ section {
 }
 
 article {
-    width: 80%;
-    background: rgb(212, 207, 207);
+    background: #C7D9D9;
     margin: 10px;
     text-align: left;
+    border-radius: 10px;
 }
 
 div {
@@ -14,25 +14,26 @@ div {
 }
 
 .block-num {
-    background: gray;
+    background: #115D8C;
     width: 20%;
     margin: 20px;
     vertical-align: top;
-    height: 80px;
+    height: 120px;
     padding: 2px;
 }
 
 .block-num:hover {
     color: white;
     background: black;
-    border: 2px solid yellow;
+    border: 2px solid #D9BA5F;
     cursor: pointer;
     padding: 0;
 }
 
 .block-num p {
     text-align: center;
-    padding-top: 13px;  
+    padding-top: 20px; 
+    font-size: 25px; 
 }
 
 .transactions {
@@ -42,4 +43,8 @@ div {
 .transactions:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.block-info {
+    padding-top: 10px;
 }

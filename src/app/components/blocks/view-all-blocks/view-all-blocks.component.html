@@ -3,9 +3,9 @@
   <article *ngFor="let block of blocks">
     <div class="block-num" (click)="viewBlock(block.index)"><p>Block {{block.index}}</p></div>
     <div class="block-info">
-      <p class="transactions" (click)="viewBlockTransactions(block.index)">total transaction {{block.transactions.length}}</p>
-      <p>mined by {{block.minedBy}}</p>
-      <p>block reward 3</p>
+      <p class="transactions" (click)="viewBlockTransactions(block.index)">Total transaction {{block.transactions.length}}</p>
+      <p>Mined by {{block.minedBy}}</p>
+      <p>Block reward 3</p>
     </div>
   </article>
 </section>
