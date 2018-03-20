@@ -17,6 +17,10 @@ npm install -g @angular/cli
 
 * Get in the folder with console and type 
 ```
+npm install
+```
+then
+```
 ng serve
 ```
  after a about minute it shoud start at http://localhost:4200/
