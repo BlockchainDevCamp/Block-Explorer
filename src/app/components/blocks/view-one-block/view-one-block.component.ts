@@ -35,4 +35,13 @@ export class ViewOneBlockComponent implements OnInit {
     this.router.navigate([`/block/${this.blockIndex}/transactions`]);
   }
 
+  viewAddress(address) {
+    this.router.navigate(['/address/' + address])
+  }
+
+  viewBlock(index) {
+    index--;
+    this.router.navigate(['/block/' + index])
+  }
+
 }

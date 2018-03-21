@@ -12,8 +12,8 @@
     <li>{{blockData?.dateCreated}}</li>
     <li class="transactions" (click)="viewBlockTransactions()">{{blockData?.transactions.length}}</li>
     <li>{{blockData?.blockHash}} </li>
-    <li>{{blockData?.prevBlockHash}}</li>
-    <li>{{blockData?.minedBy}}</li>
+    <li class="transactions" (click)="viewBlock(blockIndex)">{{blockData?.prevBlockHash}}</li>
+    <li class="transactions" (click)="viewAddress(blockData?.minedBy)">{{blockData?.minedBy}}</li>
     <li>{{blockData?.nonce}}</li>
   </ul>
 </section>

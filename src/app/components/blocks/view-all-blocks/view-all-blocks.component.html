@@ -4,7 +4,7 @@
     <div class="block-num" (click)="viewBlock(block.index)"><p>Block {{block.index}}</p></div>
     <div class="block-info">
       <p class="transactions" (click)="viewBlockTransactions(block.index)">Total transaction {{block.transactions.length}}</p>
-      <p>Mined by {{block.minedBy}}</p>
+      <p class="transactions" (click)="viewAddress(block.minedBy)">Mined by {{block.minedBy}}</p>
       <p>Block reward 3</p>
     </div>
   </article>
